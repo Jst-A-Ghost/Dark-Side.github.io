@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/png" href="logo1.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Psychotic Poems</title>
+    <style>
+    
+	@font-face {
+    	font-family: 'Psychotic';
+    	src: url('PSYCHOTI.TTF') format('truetype');
+	}
+@keyframes glow {
+    0% { text-shadow: 0 0 5px #ff79c6; }
+    50% { text-shadow: 0 0 20px #ffb86c; }
+    100% { text-shadow: 0 0 5px #ff79c6; }
+}
+.poem-title {
+    animation: glow 2s infinite alternate;
+}
+@keyframes red-glow {
+    0% { text-shadow: 0 0 5px #ff0000; }
+    50% { text-shadow: 0 0 20px #ff3333; }
+    100% { text-shadow: 0 0 5px #ff0000; }
+}
+
+header {
+    animation: red-glow 2s infinite alternate;
+}
+
+
+
+header {
+    font-family: 'Psychotic', sans-serif;
+    font-size: 10em;
+    background: url('header-wallpaper1.jpg') no-repeat center center;
+    background-size: cover;
+    padding: 100px 100px;
+    text-align: center;
+    font-size: 10em;
+    color: #ffcc00;
+    letter-spacing: 2px;
+    border-bottom: 3px solid #bd93f9;
+}
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: customfont;
+            background-color: #1e1e2f;
+            color: #ffffff;
+            overflow-y: scroll;
+            line-height: 1.8;
+      
+            
+        }
+        nav {
+            background-color: #000000;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        nav a {
+            color: #ff0000;
+            text-decoration: none;
+            font-size: 1.2em;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+        nav a:hover {
+            background-color: #ff0000;
+            color: #000000;
+        }
+        .about {
+            padding: 100px 100px;
+            max-width: 900px;
+            margin: 20px auto;
+            background: url('cde.jpg') no-repeat center center;
+	    background-size: cover;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            color: #ffffff;
+        }
+        .about h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+        .about p {
+            font-size: 1.2em;
+        }
+        main {
+            padding: 40px 20px;
+            max-width: 900px;
+            margin: 20px auto;
+            background-color: #282a36;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        }
+        .dropdown {
+            margin-bottom: 20px;
+        }
+        .dropdown select {
+            padding: 10px;
+            font-size: 1.1em;
+            border-radius: 5px;
+            border: none;
+            background-color: #44475a;
+            color: #ffffff;
+        }
+        .poem {
+            margin-bottom: 60px;
+            padding: 20px;
+            background: url('night.jpg') no-repeat center center/cover;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        .poem-title {
+            font-size: 1.8em;
+            margin-bottom: 15px;
+            color: #ffb86c;
+        }
+        .poem-content {
+            font-size: 1.1em;
+            margin-bottom: 20px;
+        }
+        .poem-image {
+            display: block;
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+@keyframes firefly {
+    0% { transform: translate(0, 0); opacity: 0.5; }
+    50% { transform: translate(20px, -20px); opacity: 1; }
+    100% { transform: translate(-20px, 20px); opacity: 0.5; }
+}
+
+.firefly {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background-color: yellow;
+    border-radius: 50%;
+    animation: firefly 3s infinite alternate;
+}
+
+    </style>
+</head>
+<body>
+    <audio id="bg-music" src="background.mp3"></audio>
+    <header>Psychotic Poems</header>
+    <nav>
+        <a href="#night">Whispers of the Night</a>
+        <a href="#dawn">Echoes of Dawn</a>
+        <a href="#breeze">A Whispered Breeze</a>
+    </nav>
+    <div class="about">
+        <h2>About Me</h2>
+        <p>Welcome to Psychotic Poems, a collection of verses that reflect the chaotic beauty of life and the depth of emotions. Here, you'll find whispers of the night, echoes of dawn, and melodies carried by the breeze. Each poem is a piece of my soul, laid bare for you to experience and connect with.</p>
+    </div>
+    <main>
+        <div class="dropdown">
+            <label for="poem-select">Choose a poem:</label>
+            <select id="poem-select" onchange="scrollToPoem()">
+                <option value="#night">Whispers of the Night</option>
+                <option value="#dawn">Echoes of Dawn</option>
+                <option value="#breeze">A Whispered Breeze</option>
+            </select>
+        </div>
+        <div id="night" class="poem">
+            <div class="poem-title">Whispers of the Night</div>
+            <div class="poem-content">
+                <p>The night whispers softly to the soul,<br>
+                   As shadows dance and stories unfold.<br>
+                   Beneath the stars, dreams take flight,<br>
+                   In the quiet calm of the velvet night.</p>
+            </div>
+        </div>
+        
+        <div id="dawn" class="poem">
+            <div class="poem-title">Echoes of Dawn</div>
+            <div class="poem-content">
+                <p>With dawn's first light, hope is reborn,<br>
+                   As golden rays caress the morn.<br>
+                   The world awakens, fresh and new,<br>
+                   Bathed in the morning's tender hue.</p>
+            </div>
+        </div>
+        
+        <div id="breeze" class="poem">
+            <div class="poem-title">A Whispered Breeze</div>
+            <div class="poem-content">
+                <p>The breeze whispers secrets to the trees,<br>
+                   Carried gently on the seas.<br>
+                   A melody sung by nature's choir,<br>
+                   Filling hearts with soft desire.</p>
+            </div>
+        </div>
+    </main>
+    <script>
+        function scrollToPoem() {
+            const selectedPoem = document.getElementById('poem-select').value;
+            document.querySelector(selectedPoem).scrollIntoView({ behavior: 'smooth' });
+        }
+
+
+    document.addEventListener("DOMContentLoaded", function () {
+        let audio = document.getElementById("bg-music");
+
+        function playAudio() {
+            audio.play().catch(error => console.log("Autoplay blocked:", error));
+            document.removeEventListener("click", playAudio); // Remove listener after first click
+        }
+
+        document.addEventListener("click", playAudio);
+    });
+    </script>
+
+
+</body>
+</html>
